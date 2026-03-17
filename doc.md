@@ -102,6 +102,8 @@ A p-érték kisebb, mint 0.05, ezért elutasítjuk a nullhipotézist. Ez miatt b
 
 ## Lineáris regresszió eltöltött időre a bevétel és a kor alapján
 
+Forráskód: [4_lin_regresszio.r](4_lin_regresszio.r)
+
 ```
 Modell 1: time_spent ~ age
 
@@ -189,3 +191,40 @@ Model 3 R-squared: 0.001147532 AIC: 4706.35
 
 - R² alapján a harmadik (ez a legnagyobb)
 - AIC alapján az első (ez a legkisebb)
+
+## Nemlineáris regresszió a platformon eltöltött idő megbecslésére kor alapján
+
+Forráskód: [5_nemlin_regresszio.r](5_nemlin_regresszio.r)
+
+```
+Nemlineáris regresszió modell (kvadratikus):
+
+Call:
+lm(formula = time_spent ~ poly(age, 2), data = train_data)
+
+Residuals:
+    Min      1Q  Median      3Q     Max
+-4.1236 -2.0953 -0.0707  2.0015  4.1672
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)
+(Intercept)    5.03103    0.08034  62.621   <2e-16 ***
+poly(age, 2)1 -2.64353    2.53933  -1.041    0.298
+poly(age, 2)2 -0.81012    2.53933  -0.319    0.750
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.539 on 996 degrees of freedom
+Multiple R-squared:  0.001189,  Adjusted R-squared:  -0.0008168
+F-statistic: 0.5928 on 2 and 996 DF,  p-value: 0.553
+
+
+Predikció:
+Tényleges érték: 3
+Előrejelzett érték: 4.92974
+Abszolút eltérés: 1.92974
+```
+
+### Ábra
+
+![](5_nemlin_regresszio_plot.png)
