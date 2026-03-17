@@ -56,7 +56,7 @@ Nincs jelentős különbség az átlagos időtöltésben a férfiak és nők kö
 
 `H₀: μ_férfi = μ_nő`, ahol `μ` az átlagot jelöli.
 
-### Null-hipotézis eredménye
+#### Null-hipotézis eredménye
 
 ```
 t = -1.8618
@@ -71,3 +71,31 @@ Mivel a p-érték 0.05-nől nagyobb, ezért nem tudjuk elutasítani a null-hipot
 Van jelentős különbség az átlagos időtöltésben a férfiak és nők között.
 
 Azonban ezt a próba ténylgesen nem bizonyítja.
+
+## A nem és platform változók összefüggése (Chi négyzet próba)
+
+Forráskód: [3_khi_negyzet_proba.r](3_khi_negyzet_proba.r)
+
+### Kontingencia tábla nem és platform között:
+
+|             | Facebook | Instagram | YouTube |
+| ----------: | :------: | :-------: | :-----: |
+|          Nő |    85    |    135    |   111   |
+|       Férfi |   113    |    128    |   96    |
+| Nem-Bináris |   109    |    100    |   123   |
+
+Khí-négyzet próba eredménye:
+
+```
+X-squared = 13.436
+df = 4
+p-value = 0.009331
+```
+
+### Null-hipotézis (H0)
+
+A nem és platform függetlenek egymástól.
+
+#### Null-hipotézis eredménye
+
+A p-érték kisebb, mint 0.05, ezért elutasítjuk a nullhipotézist. Ez miatt biztosra mondható, hogy a nemtől függ milyen platformon töltenek el a felhasználók időt.
