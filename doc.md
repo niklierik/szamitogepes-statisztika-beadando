@@ -40,3 +40,34 @@ Forráskód: [1_leiro.r](1_leiro.r)
 ![Indebt barplot](1_indebt_barplot.png)
 ![Owns Car barplot](1_Owns_Car_barplot.png)
 ![Platform barplot](1_platform_barplot.png)
+
+## Közösségi médián töltött idő férfiak és nők között (kétmintás t-próba)
+
+Forráskód: [2_t_proba.r](2_t_proba.r)
+
+### Átlagos eltöltött idő
+
+- **Férfiaknál**: 4.821958
+- **Nőnél**: 5.190332
+
+### Null-hipotézis (H0)
+
+Nincs jelentős különbség az átlagos időtöltésben a férfiak és nők között.
+
+`H₀: μ_férfi = μ_nő`, ahol `μ` az átlagot jelöli.
+
+### Null-hipotézis eredménye
+
+```
+t = -1.8618
+df = 665.24
+p-value = 0.06307
+```
+
+Mivel a p-érték 0.05-nől nagyobb, ezért nem tudjuk elutasítani a null-hipotézist. Esetleg azt az alternatív hipotézist megfogalmazhatjuk:
+
+#### Alternatív hipotézis (H1)
+
+Van jelentős különbség az átlagos időtöltésben a férfiak és nők között.
+
+Azonban ezt a próba ténylgesen nem bizonyítja.
