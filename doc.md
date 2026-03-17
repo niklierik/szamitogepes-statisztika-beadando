@@ -99,3 +99,93 @@ A nem és platform függetlenek egymástól.
 #### Null-hipotézis eredménye
 
 A p-érték kisebb, mint 0.05, ezért elutasítjuk a nullhipotézist. Ez miatt biztosra mondható, hogy a nemtől függ milyen platformon töltenek el a felhasználók időt.
+
+## Lineáris regresszió eltöltött időre a bevétel és a kor alapján
+
+```
+Modell 1: time_spent ~ age
+
+Call:
+lm(formula = time_spent ~ age, data = data_set)
+
+Residuals:
+    Min      1Q  Median      3Q     Max
+-4.1625 -2.0734 -0.0448  2.0220  4.1174
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept)  5.289674   0.256660  20.610   <2e-16 ***
+age         -0.006360   0.005948  -1.069    0.285
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.538 on 998 degrees of freedom
+Multiple R-squared:  0.001144,  Adjusted R-squared:  0.0001434
+F-statistic: 1.143 on 1 and 998 DF,  p-value: 0.2852
+
+R-squared: 0.001144263
+AIC: 4704.353
+
+Modell 2: time_spent ~ income
+
+Call:
+lm(formula = time_spent ~ income, data = data_set)
+
+Residuals:
+    Min      1Q  Median      3Q     Max
+-4.0492 -2.0372 -0.0258  1.9796  3.9914
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)
+(Intercept) 4.968e+00  4.155e-01   11.96   <2e-16 ***
+income      4.081e-06  2.715e-05    0.15    0.881
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.539 on 998 degrees of freedom
+Multiple R-squared:  2.263e-05, Adjusted R-squared:  -0.0009793
+F-statistic: 0.02259 on 1 and 998 DF,  p-value: 0.8806
+
+R-squared: 2.263144e-05
+AIC: 4705.476
+
+Modell 3: time_spent ~ age + income
+
+Call:
+lm(formula = time_spent ~ age + income, data = data_set)
+
+Residuals:
+    Min      1Q  Median      3Q     Max
+-4.1695 -2.0736 -0.0454  2.0194  4.1224
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)
+(Intercept)  5.265e+00  5.014e-01  10.501   <2e-16 ***
+age         -6.330e-03  5.974e-03  -1.060    0.290
+income       1.557e-06  2.725e-05   0.057    0.954
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 2.539 on 997 degrees of freedom
+Multiple R-squared:  0.001148,  Adjusted R-squared:  -0.0008562
+F-statistic: 0.5727 on 2 and 997 DF,  p-value: 0.5642
+
+R-squared: 0.001147532
+AIC: 4706.35
+
+Összehasonlítás:
+Model 1 R-squared: 0.001144263 AIC: 4704.353
+Model 2 R-squared: 2.263144e-05 AIC: 4705.476
+Model 3 R-squared: 0.001147532 AIC: 4706.35
+```
+
+### Ábrák
+
+![](4_model1_plot.png)
+![](4_model2_plot.png)
+![](4_model3_plot.png)
+
+### Legjobb modell?
+
+- R² alapján a harmadik (ez a legnagyobb)
+- AIC alapján az első (ez a legkisebb)
