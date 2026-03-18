@@ -286,4 +286,33 @@ Ha az érték 0.5 felett van, akkor jól magyarázza
 
 ![](6_faktor_analizis_plot.png)
 
-## 7.
+## 7. K-means-szel osztályozni az eltöltött időt (óra/nap) kor alapján
+
+### Output
+
+```
+Automatikusan kiválasztott optimális klaszterek száma: k = 9 (ahol a hiba csökkenése lelassul)
+
+K-means klaszterezés eredménye (k = 9 ):
+
+A csoportok átlagos értékei (középpontok):
+       age time_spent
+1 43.76000   4.456000
+2 39.11321   6.273585
+3 53.73529   7.823529
+4 33.53043   4.460870
+5 49.07547   5.018868
+6 20.57931   5.365517
+7 27.21094   4.781250
+8 55.27473   2.879121
+9 61.73276   4.982759
+
+Minden csoportba hány pont tartozik:
+[1] 125 106  68 115 106 145 128  91 116
+Összes hiba a csoportosításban: 8329.838 (alacsonyabb = jobb)
+```
+
+### Ábrák
+
+![](7_kmeans_plot.png)
+![](7_elbow_plot.png)
