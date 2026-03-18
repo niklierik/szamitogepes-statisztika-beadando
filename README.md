@@ -191,8 +191,8 @@ Model 3 R-squared: 0.001147532 AIC: 4706.35
 
 ### Legjobb modell?
 
-- R² alapján a harmadik (ez a legnagyobb)
-- AIC alapján az első (ez a legkisebb)
+- R² alapján a harmadik (ez a legnagyobb R² értékű)
+- AIC alapján az első (ez a legkisebb AIC értékű)
 
 ## 5. Nemlineáris regresszió a platformon eltöltött idő megbecslésére kor alapján
 
