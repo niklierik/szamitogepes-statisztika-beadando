@@ -2,6 +2,8 @@
 
 Forrása az adathalmaznak: https://www.kaggle.com/datasets/imyjoshua/average-time-spent-by-a-user-on-social-media?resource=download
 
+Forráskódok és Github repository: https://github.com/niklierik/szamitogepes-statisztika-beadando
+
 ## Leíró statisztika
 
 Forráskód: [1_leiro.r](1_leiro.r)
