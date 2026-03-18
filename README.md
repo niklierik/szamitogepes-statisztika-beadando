@@ -1,4 +1,4 @@
-# Statisztika a közösségi média használatból
+# Statisztika a közösségi média használatról
 
 Forrása az adathalmaznak: https://www.kaggle.com/datasets/imyjoshua/average-time-spent-by-a-user-on-social-media?resource=download
 
